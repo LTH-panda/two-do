@@ -1,16 +1,20 @@
 import { ChangeEvent, useCallback } from "react";
 import { useRecoilState, useResetRecoilState } from "recoil";
-import { writeTodo } from "states/write";
+import { writeTime, writeTitle } from "states/write";
 
 function useWrite() {
-  const [write, setWrite] = useRecoilState(writeTodo);
-  const changeWrite = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => setWrite(e.target.value),
-    [write]
+  // title
+  const [title, setTitle] = useRecoilState(writeTitle);
+  const changeTitle = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => setTitle(e.target.value),
+    [title]
   );
-  const resetWrite = useResetRecoilState(writeTodo);
+  const resetTitle = useResetRecoilState(writeTitle);
+  // time
+  const [time, setTime] = useRecoilState(writeTime);
+  const resetTime = useResetRecoilState(writeTime);
 
-  return { write, changeWrite, resetWrite };
+  return { title, time, changeTitle, resetTitle, setTime, resetTime };
 }
 
 export default useWrite;

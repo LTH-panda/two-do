@@ -17,7 +17,7 @@ function TextField({
   onReset,
 }: TextFieldProps) {
   return (
-    <div className="shadow-md flex bg-white rounded-md items-center">
+    <div className="shadow-md flex bg-white rounded-2xl items-center">
       <input
         placeholder={placeholder}
         name={name}

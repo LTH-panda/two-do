@@ -1,4 +1,10 @@
 /* theme */
 .layout {
-  @apply flex flex-col pb-[94px] px-8;
+  @apply flex flex-col pb-[95px] px-8 pt-[95px];
+}
+.isHover {
+  @apply duration-150 hover:-translate-y-2;
+}
+.btn {
+  @apply flex justify-center items-center p-6 shadow-md rounded-2xl bg-white font-primary text-xl;
 }

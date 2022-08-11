@@ -1,7 +1,7 @@
 import { AppScreen } from "@stackflow/basic-ui";
 import platte from "commons/styles/platte";
 import { BottomTab, Header } from "components/@modules";
-import { TodoActions, TodoInput, TodoList } from "components/Todo";
+import { TodoActions, TodoList } from "components/Todo";
 import React from "react";
 
 function TodoScreen() {
@@ -9,7 +9,7 @@ function TodoScreen() {
     <AppScreen backgroundColor={platte.color.bg}>
       <Header title="To do" />
       <main className="layout gap-8">
-        <TodoInput />
+        plan 마다 계획 모아보기
         <TodoList />
       </main>
       <TodoActions />

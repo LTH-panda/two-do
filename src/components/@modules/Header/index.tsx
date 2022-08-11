@@ -1,28 +1,17 @@
-import { SvgIcon } from "components/@base";
-import React, { useCallback } from "react";
-import { useFlow } from "stackflow";
+import React from "react";
 
 type HeaderProps = {
-  back?: "back" | "close";
+  left?: React.ReactNode;
   title?: string;
+  right?: React.ReactNode;
 };
 
-function Header({ back, title }: HeaderProps) {
-  const { pop } = useFlow();
-  const onBack = useCallback(() => pop(), []);
-
+function Header({ left, title, right }: HeaderProps) {
   return (
-    <header className="p-8">
-      {back && (
-        <button type="button" onClick={onBack}>
-          {back === "back" ? (
-            <SvgIcon name="chevronLeft" />
-          ) : (
-            <SvgIcon name="close" />
-          )}
-        </button>
-      )}
-      <h1 className="font-primary text-3xl">{title}</h1>
+    <header className="p-4 absolute top-0 z-10 inset-x-0 flex items-center">
+      {left && <div className="mr-auto">{left}</div>}
+      <h1 className="font-primary text-3xl p-4">{title}</h1>
+      <div className="ml-auto">{right}</div>
     </header>
   );
 }
