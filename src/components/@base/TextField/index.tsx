@@ -23,6 +23,7 @@ function TextField({
         name={name}
         value={value}
         onChange={onChange}
+        autoComplete="off"
         className="flex-1 p-6 outline-none bg-transparent"
       />
       {value && (
