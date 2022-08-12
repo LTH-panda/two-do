@@ -12,7 +12,7 @@ function TodoCard({ todo = "tes" }: TodoCardProps) {
   return (
     <div
       onClick={openActions}
-      className="rounded-2xl shadow-md p-4 bg-white flex items-center cursor-pointer"
+      className="flex items-center px-8 py-6 bg-white shadow-md cursor-pointer rounded-2xl"
     >
       <h1 className="flex-1">{todo}</h1>
       <button type="button" onClick={openActions}>

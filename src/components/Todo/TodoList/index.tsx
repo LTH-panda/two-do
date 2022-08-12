@@ -9,10 +9,15 @@ function TodoList() {
   if (!todos) return <ErrorMessage message="two do" />;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col flex-1 gap-4">
       {/* {todos.map((T) => (
         <TodoCard key={T.id} />
       ))} */}
+      <TodoCard />
+      <TodoCard />
+      <TodoCard />
+      <TodoCard />
+      <TodoCard />
       <TodoCard />
       <TodoCard />
       <TodoCard />

@@ -8,10 +8,10 @@ type HeaderProps = {
 
 function Header({ left, title, right }: HeaderProps) {
   return (
-    <header className="p-4 absolute top-0 z-10 inset-x-0 flex items-center">
+    <header className="absolute inset-x-0 top-0 z-10 flex items-center pt-4 backdrop-blur">
       {left && <div className="mr-auto">{left}</div>}
-      <h1 className="font-primary text-3xl p-4">{title}</h1>
-      <div className="ml-auto">{right}</div>
+      <h1 className="px-8 py-4 text-4xl font-primary">{title}</h1>
+      {right && <div className="ml-auto">{right}</div>}
     </header>
   );
 }

@@ -4,6 +4,7 @@ export { ReactComponent as close } from "assets/icons/close.svg";
 export { ReactComponent as dotsHorizontal } from "assets/icons/dots-horizontal.svg";
 export { ReactComponent as homeSmile } from "assets/icons/home-smile.svg";
 export { ReactComponent as minus } from "assets/icons/minus-square.svg";
+export { ReactComponent as play } from "assets/icons/play-square.svg";
 export { ReactComponent as plus } from "assets/icons/plus-square.svg";
 export { ReactComponent as settings } from "assets/icons/settings.svg";
 export { ReactComponent as xSquare } from "assets/icons/x-square.svg";

@@ -1,15 +1,14 @@
-import { AppScreen } from "@stackflow/basic-ui";
-import platte from "commons/styles/platte";
 import { BottomTab, Header } from "components/@modules";
+import Layout from "components/Layout";
 import React from "react";
 
 function SettingsScreen() {
   return (
-    <AppScreen backgroundColor={platte.color.bg}>
+    <Layout>
       <Header title="settings" />
-      <main />
+      <div className="layout">test</div>
       <BottomTab />
-    </AppScreen>
+    </Layout>
   );
 }
 

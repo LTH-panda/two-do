@@ -1,6 +1,5 @@
-import { AppScreen } from "@stackflow/basic-ui";
-import platte from "commons/styles/platte";
 import { Back, Header } from "components/@modules";
+import Layout from "components/Layout";
 import {
   PlanWriteSubmit,
   PlanWriteTime,
@@ -17,14 +16,14 @@ function AddPlanScreen() {
   }, []);
 
   return (
-    <AppScreen backgroundColor={platte.color.bg} theme="android">
+    <Layout screenTheme="android">
       <Header title="Plan" right={<Back theme="close" />} />
-      <main className="layout gap-12">
+      <main className="gap-12 p-8 layout">
         <PlanWriteTitle />
         <PlanWriteTime />
-        <PlanWriteSubmit />
       </main>
-    </AppScreen>
+      <PlanWriteSubmit />
+    </Layout>
   );
 }
 

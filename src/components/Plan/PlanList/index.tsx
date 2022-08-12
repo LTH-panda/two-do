@@ -16,6 +16,22 @@ function PlanList() {
       title: "test",
       date: "date",
     },
+    {
+      title: "test",
+      date: "date",
+    },
+    {
+      title: "test",
+      date: "date",
+    },
+    {
+      title: "test",
+      date: "date",
+    },
+    {
+      title: "test",
+      date: "date",
+    },
   ];
 
   if (!plans) return <ErrorMessage message="two do" />;

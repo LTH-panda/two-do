@@ -7,7 +7,7 @@ function PlanWriteNav() {
   const { replace } = useFlow();
 
   const onSubmit = useCallback(() => {
-    if (title && time) replace("PlanScreen", {});
+    if (title && time) replace("PlanScreen", { title });
   }, [title, time]);
 
   return (
@@ -16,7 +16,7 @@ function PlanWriteNav() {
       onClick={onSubmit}
       className={`${
         title && time && "bg-sky-500 !text-white"
-      } fixed bottom-0 inset-x-0 p-8 bg-white border-t-2 text-2xl text-gray-300`}
+      } p-8 bg-white border-t-2 text-2xl text-gray-300`}
     >
       완료
     </button>

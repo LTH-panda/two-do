@@ -1,21 +1,20 @@
 import React from "react";
-import { AppScreen } from "@stackflow/basic-ui";
 import { BottomTab, Header } from "components/@modules";
-import platte from "commons/styles/platte";
 import { PlanAddButton, PlanList } from "components/Plan";
+import Layout from "components/Layout";
 
 function HomeScreen() {
   return (
-    <AppScreen backgroundColor={platte.color.bg}>
+    <Layout>
       <Header title="two do" />
-      <main className="layout">
+      <div className="p-8 layout">
         <PlanList />
         <section className="fixed bottom-32 right-5">
           <PlanAddButton />
         </section>
-      </main>
+      </div>
       <BottomTab />
-    </AppScreen>
+    </Layout>
   );
 }
 
