@@ -5,7 +5,11 @@ type ErrorMessageProps = {
 };
 
 function ErrorMessage({ message }: ErrorMessageProps) {
-  return <div className="text-gray-500 text-2xl">{message}</div>;
+  return (
+    <div className="flex items-center justify-center flex-1 text-2xl text-gray-300 font-primary">
+      {message}
+    </div>
+  );
 }
 
 export default ErrorMessage;
