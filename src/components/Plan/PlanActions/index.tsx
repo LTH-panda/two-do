@@ -1,24 +1,20 @@
 import { SvgIcon } from "components/@base";
-import useTodo from "hooks/useTodo";
-import React from "react";
+import React, { useCallback } from "react";
+import { useFlow } from "stackflow";
 
 function PlanActions() {
-  const { openAdd } = useTodo();
+  const { push } = useFlow();
+
+  const onStart = useCallback(() => push("AddDueScreen", {}), []);
 
   return (
-    <div className="flex items-center justify-center gap-12">
+    <div className="flex justify-center">
       <button
         type="button"
-        onClick={openAdd}
-        className="p-4 bg-white shadow-md rounded-2xl isHover"
+        onClick={onStart}
+        className="flex p-6 isHover rounded-2xl bg-sky-500"
       >
-        <SvgIcon name="plus" size={50} />
-      </button>
-      <button
-        type="button"
-        className="p-4 shadow-md bg-sky-500 rounded-2xl isHover"
-      >
-        <SvgIcon name="play" size={50} />
+        <SvgIcon name="scales" size={40} />
       </button>
     </div>
   );

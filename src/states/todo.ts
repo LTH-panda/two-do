@@ -1,12 +1,20 @@
 import { atom } from "recoil";
 
-export const todoTodoList = atom<[]>({
+export type Todo = {
+  id: string;
+  title: string;
+};
+export const todoTodoList = atom<Todo[]>({
   key: "todoTodoList",
   default: [],
 });
 export const todoActionsSheet = atom<boolean>({
   key: "todoActionsSheet",
   default: false,
+});
+export const todoActionsSelected = atom<Todo>({
+  key: "todoActionsSelected",
+  default: undefined,
 });
 export const todoAddSheet = atom<boolean>({
   key: "todoAddSheet",

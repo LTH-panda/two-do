@@ -2,19 +2,21 @@ import "@stackflow/basic-ui/index.css";
 import { stackflow } from "@stackflow/react";
 import { basicRendererPlugin } from "@stackflow/plugin-renderer-basic";
 import {
+  AddDueScreen,
+  AddTodoScreen,
+  ConfirmScreen,
   HomeScreen,
-  TodoScreen,
+  ResultScreen,
   SettingsScreen,
-  AddPlanScreen,
-  PlanScreen,
 } from "screens";
 
 export const activities = {
-  AddPlanScreen,
+  AddDueScreen,
+  AddTodoScreen,
+  ConfirmScreen,
   HomeScreen,
-  PlanScreen,
+  ResultScreen,
   SettingsScreen,
-  TodoScreen,
 };
 
 export const { Stack, useFlow } = stackflow({

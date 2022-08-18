@@ -7,7 +7,7 @@ type SvgIconProps = {
   color?: string;
 };
 
-function SvgIcon({ name, size = 30, color = "#000" }: SvgIconProps) {
+function SvgIcon({ name, size = 40, color = "#000" }: SvgIconProps) {
   const Icon = Icons[name];
 
   return <Icon width={size} height={size} color={color} />;

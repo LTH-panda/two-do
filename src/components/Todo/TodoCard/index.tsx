@@ -3,20 +3,20 @@ import useTodo from "hooks/useTodo";
 import React from "react";
 
 type TodoCardProps = {
-  todo?: string;
+  id: string;
+  title: string;
 };
 
-function TodoCard({ todo = "tes" }: TodoCardProps) {
-  const { openActions } = useTodo();
+function TodoCard({ id, title }: TodoCardProps) {
+  const { removeTodo } = useTodo();
+
+  const onRemove = () => removeTodo(id);
 
   return (
-    <div
-      onClick={openActions}
-      className="flex items-center px-8 py-6 bg-white shadow-md cursor-pointer rounded-2xl"
-    >
-      <h1 className="flex-1">{todo}</h1>
-      <button type="button" onClick={openActions}>
-        <SvgIcon name="dotsHorizontal" />
+    <div className="flex items-center py-2 pl-4 pr-3 bg-white rounded-md shadow-md animate-scaleUp">
+      <h1 className="flex-1 break-all">{title}</h1>
+      <button type="button" onClick={onRemove} className="p-1">
+        <SvgIcon name="trash" size={25} />
       </button>
     </div>
   );

@@ -1,10 +1,23 @@
 /* theme */
 .layout {
-  @apply flex flex-col pt-[100px] flex-1 overflow-y-auto;
+  @apply flex flex-col pt-[6rem] flex-1 overflow-y-auto;
 }
 .isHover {
   @apply duration-150 hover:-translate-y-2;
 }
+.isActive {
+  @apply duration-150 active:-translate-y-2;
+}
+
 .btn {
   @apply flex items-center justify-center p-6 text-xl bg-white shadow-md rounded-2xl font-primary;
+}
+.cell {
+  @apply flex px-8 py-4 hover:bg-gray-200;
+}
+.break-keep {
+  word-break: keep-all;
+}
+.text-wrap {
+  overflow-wrap: break-word;
 }

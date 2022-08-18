@@ -21,6 +21,7 @@ function TodoTabs() {
         <button
           type="button"
           onClick={() => setTab(T.index)}
+          key={T.index}
           className={`${
             T.index !== tab && "text-gray-400"
           } flex items-center justify-center flex-1 text-xl font-primary`}

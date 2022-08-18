@@ -24,16 +24,6 @@ function BottomTab() {
       </button>
       <button
         type="button"
-        onClick={() => onNavigate("TodoScreen")}
-        className="flex justify-center flex-1 p-8"
-      >
-        <SvgIcon
-          name="check"
-          color={name === "TodoScreen" ? "#000" : "#cbd5e1"}
-        />
-      </button>
-      <button
-        type="button"
         onClick={() => onNavigate("SettingsScreen")}
         className="flex justify-center flex-1 p-8"
       >
