@@ -15,7 +15,7 @@ function Modal({ isOpen, onClose, children }: ModalProps) {
         onClick={onClose}
         className="fixed inset-0 bg-gray-700 opacity-60 animate-fadeIn"
       />
-      <div className="fixed -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 animate-slideUp">
+      <div className="fixed -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
         {children}
       </div>
     </>
