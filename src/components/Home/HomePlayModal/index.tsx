@@ -7,9 +7,7 @@ function HomePlayModal() {
     usePlan();
 
   const onConfirm = useCallback(() => {
-    console.log(plan.todos);
-    const randomTodos = plan.todos.slice().sort(() => Math.random());
-    console.log(randomTodos);
+    const randomTodos = plan.todos.slice().sort(() => Math.random() - 0.5);
     setPlan({ ...plan, todos: randomTodos });
     playPlan();
     closePlayModal();
