@@ -9,5 +9,6 @@ export { ReactComponent as play } from "assets/icons/play-square.svg";
 export { ReactComponent as plus } from "assets/icons/plus-square.svg";
 export { ReactComponent as scales } from "assets/icons/scales.svg";
 export { ReactComponent as settings } from "assets/icons/settings.svg";
+export { ReactComponent as stop } from "assets/icons/stop.svg";
 export { ReactComponent as trash } from "assets/icons/trash.svg";
 export { ReactComponent as xSquare } from "assets/icons/x-square.svg";

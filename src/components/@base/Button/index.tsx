@@ -19,7 +19,7 @@ function Button({
       onClick={onClick}
       className={`${isFit ? "w-fit" : "w-full"} ${
         theme === "primary" ? "bg-sky-500 text-white" : "bg-gray-200"
-      } flex items-center justify-center p-4 px-8 font-primary text-xl rounded-2xl shadow-md isActive`}
+      } btn`}
     >
       {title}
     </button>

@@ -10,7 +10,7 @@
 }
 
 .btn {
-  @apply flex items-center justify-center p-6 text-xl bg-white shadow-md rounded-2xl font-primary;
+  @apply flex items-center justify-center p-4 px-8 text-xl shadow-md font-primary rounded-2xl isActive;
 }
 .cell {
   @apply flex px-8 py-4 hover:bg-gray-200;

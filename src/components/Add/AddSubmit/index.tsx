@@ -1,14 +1,14 @@
 import { useActivity } from "@stackflow/react";
 import useAdd from "hooks/useAdd";
-import useTodo from "hooks/useTodo";
+import usePlan from "hooks/usePlan";
 import React, { useCallback, useEffect, useState } from "react";
 import { useFlow } from "stackflow";
 
 function AddSubmit() {
   const { push, pop } = useFlow();
   const { name } = useActivity();
-  const { due } = useAdd();
-  const { todos } = useTodo();
+  const { due, todos } = useAdd();
+  const { setPlan } = usePlan();
   const [progress, setProgress] = useState<"due" | "todo">("due");
   const [isAble, setIsAble] = useState<boolean>(false);
 
@@ -32,10 +32,11 @@ function AddSubmit() {
       push("AddTodoScreen", {});
     }
     if (progress === "todo") {
-      pop({ animate: false });
+      setPlan({ due, todos });
+      pop();
       pop({ animate: false });
     }
-  }, [progress]);
+  }, [progress, due, todos]);
 
   return (
     <button

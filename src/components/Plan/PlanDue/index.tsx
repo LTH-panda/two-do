@@ -1,15 +1,15 @@
-import useAdd from "hooks/useAdd";
+import usePlan from "hooks/usePlan";
 import React from "react";
 import formatTime from "utils/formatTime";
 
-function AddDue() {
-  const { due } = useAdd();
+function PlanDue() {
+  const { plan } = usePlan();
 
   return (
     <div className="text-xl text-center text-sky-500 font-primary">
-      {formatTime(due)}안에 끝내기
+      {formatTime(plan.due)}안에 끝내기
     </div>
   );
 }
 
-export default AddDue;
+export default PlanDue;

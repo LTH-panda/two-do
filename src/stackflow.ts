@@ -4,8 +4,8 @@ import { basicRendererPlugin } from "@stackflow/plugin-renderer-basic";
 import {
   AddDueScreen,
   AddTodoScreen,
-  ConfirmScreen,
   HomeScreen,
+  PlanScreen,
   ResultScreen,
   SettingsScreen,
 } from "screens";
@@ -13,8 +13,8 @@ import {
 export const activities = {
   AddDueScreen,
   AddTodoScreen,
-  ConfirmScreen,
   HomeScreen,
+  PlanScreen,
   ResultScreen,
   SettingsScreen,
 };

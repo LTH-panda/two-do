@@ -10,3 +10,13 @@ export const addTodoInput = atom<string>({
   key: "addTodoInput",
   default: "",
 });
+
+export type Todo = {
+  id: string;
+  title: string;
+  isDone: boolean;
+};
+export const addTodos = atom<Todo[]>({
+  key: "addTodos",
+  default: [],
+});

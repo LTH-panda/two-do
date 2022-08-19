@@ -1,9 +1,21 @@
+import { useActivity } from "@stackflow/react";
 import { Back, Header, Title } from "components/@modules";
 import { AddDueSelect, AddSubmit } from "components/Add";
 import Layout from "components/Layout";
-import React from "react";
+import useAdd from "hooks/useAdd";
+import React, { useEffect } from "react";
 
 function AddDueScreen() {
+  const { params } = useActivity();
+  const { resetDue, resetTodo } = useAdd();
+
+  useEffect(() => {
+    if (!params.isEdit) {
+      resetDue();
+      resetTodo();
+    }
+  }, [params]);
+
   return (
     <Layout screenTheme="android">
       <Header left={<Back theme="close" />} />

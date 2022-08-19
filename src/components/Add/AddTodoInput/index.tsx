@@ -1,11 +1,9 @@
 import { SvgIcon } from "components/@base";
 import useAdd from "hooks/useAdd";
-import useTodo from "hooks/useTodo";
 import React, { useCallback } from "react";
 
 function AddTodoInput() {
-  const { todoInput, changeTodoInput, resetTodoInput } = useAdd();
-  const { addTodo } = useTodo();
+  const { todoInput, changeTodoInput, resetTodoInput, addTodo } = useAdd();
 
   const onSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
