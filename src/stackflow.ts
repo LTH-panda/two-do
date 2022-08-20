@@ -5,7 +5,6 @@ import {
   AddDueScreen,
   AddTodoScreen,
   HomeScreen,
-  PlanScreen,
   ResultScreen,
   SettingsScreen,
 } from "screens";
@@ -14,7 +13,6 @@ export const activities = {
   AddDueScreen,
   AddTodoScreen,
   HomeScreen,
-  PlanScreen,
   ResultScreen,
   SettingsScreen,
 };

@@ -1,4 +1,9 @@
-import { PlanAlternative, PlanDue, PlanTodoRemains } from "components/Plan";
+import {
+  PlanAlternative,
+  PlanDue,
+  PlanTimer,
+  PlanTodoRemains,
+} from "components/Plan";
 import { TodoList } from "components/Todo";
 import usePlan from "hooks/usePlan";
 import React from "react";
@@ -10,7 +15,7 @@ function HomeContent() {
     return (
       <div className="flex flex-col flex-1 gap-2">
         <section className="flex items-center gap-12 justify-evenly">
-          <PlanDue />
+          <PlanTimer />
           <PlanTodoRemains />
         </section>
         <section className="flex items-center justify-center flex-1">
@@ -19,15 +24,11 @@ function HomeContent() {
       </div>
     );
 
-  if (plan)
+  if (plan.due)
     return (
-      <div className="flex flex-col flex-1 gap-2">
-        {plan && (
-          <>
-            <PlanDue />
-            <TodoList />
-          </>
-        )}
+      <div className="flex flex-col justify-center flex-1 gap-4">
+        <PlanDue />
+        <TodoList />
       </div>
     );
 

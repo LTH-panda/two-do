@@ -3,12 +3,19 @@ import usePlan from "hooks/usePlan";
 import React, { useCallback } from "react";
 
 function HomePlayModal() {
-  const { plan, isOpenPlayModal, setPlan, closePlayModal, playPlan } =
-    usePlan();
+  const {
+    plan,
+    isOpenPlayModal,
+    closePlayModal,
+    initPlayingTodos,
+    playPlan,
+    resetCountDownTime,
+  } = usePlan();
 
   const onConfirm = useCallback(() => {
     const randomTodos = plan.todos.slice().sort(() => Math.random() - 0.5);
-    setPlan({ ...plan, todos: randomTodos });
+    initPlayingTodos(randomTodos);
+    resetCountDownTime();
     playPlan();
     closePlayModal();
   }, [plan]);

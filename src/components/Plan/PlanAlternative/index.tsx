@@ -1,26 +1,36 @@
 import usePlan from "hooks/usePlan";
-import React, { useEffect, useState } from "react";
-import { Todo } from "states/add";
+import React, { useEffect } from "react";
 import PlanAlterCard from "../PlanAlterCard";
 
 function PlanAlternative() {
-  const { plan } = usePlan();
-
-  const [leftCard, setLeftCard] = useState<Todo | undefined>(undefined);
-  const [rightCard, setRightCard] = useState<Todo | undefined>(undefined);
+  const { alterCards, playingTodos, setAlterCards, popPlayingTodos } =
+    usePlan();
 
   useEffect(() => {
-    const yetDone = plan.todos.filter((T) => !T.isDone);
+    if (playingTodos.length) {
+      if (!alterCards.left)
+        setAlterCards({ ...alterCards, left: popPlayingTodos() });
 
-    if (!leftCard) setLeftCard(yetDone.pop());
-    if (!rightCard) setRightCard(yetDone.pop());
-  }, [plan, leftCard, rightCard]);
+      if (!alterCards.right)
+        setAlterCards({ ...alterCards, right: popPlayingTodos() });
+    }
+  }, [playingTodos, alterCards]);
 
   return (
-    <div className="flex flex-1 h-full gap-4 py-4 max-h-80">
-      {leftCard && <PlanAlterCard id={leftCard.id} content={leftCard.title} />}
-      {rightCard && (
-        <PlanAlterCard id={rightCard.id} content={rightCard.title} />
+    <div className="flex justify-center flex-1 h-full gap-8 py-4 max-h-80">
+      {alterCards.left && (
+        <PlanAlterCard
+          id={alterCards.left.id}
+          content={alterCards.left.title}
+          direction="left"
+        />
+      )}
+      {alterCards.right && (
+        <PlanAlterCard
+          id={alterCards.right.id}
+          content={alterCards.right.title}
+          direction="right"
+        />
       )}
     </div>
   );

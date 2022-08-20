@@ -8,7 +8,7 @@ export type Plan = {
 
 export const planPlan = atom<Plan>({
   key: "planPlan",
-  default: undefined,
+  default: { due: 0, todos: [] },
 });
 
 export const planPlayModal = atom<boolean>({
@@ -31,12 +31,32 @@ export const planCompleteAction = atom<boolean>({
   default: false,
 });
 
-export const planTodoRandomSort = atom<Todo[]>({
-  key: "planTodoRandomeSort",
-  default: undefined,
+export const planPlayingTodos = atom<Todo[]>({
+  key: "planPlayingTodos",
+  default: [],
 });
 
-export const planSelectedTodo = atom<string | undefined>({
+type SelectedTodo = {
+  direction: "left" | "right";
+  id: string;
+};
+
+export const planSelectedTodo = atom<SelectedTodo>({
   key: "planSelectedTodo",
-  default: undefined,
+  default: { direction: "left", id: "" },
+});
+
+type Cards = {
+  left: Todo | undefined;
+  right: Todo | undefined;
+};
+
+export const planCards = atom<Cards>({
+  key: "planCards",
+  default: { left: undefined, right: undefined },
+});
+
+export const planTime = atom<number>({
+  key: "planTime",
+  default: Date.now(),
 });

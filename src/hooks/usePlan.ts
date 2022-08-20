@@ -1,12 +1,16 @@
 import { useCallback } from "react";
 import { useRecoilState, useResetRecoilState } from "recoil";
+import { Todo } from "states/add";
 import {
+  planCards,
   planCompleteAction,
   planPauseModal,
   planPlan,
   planPlay,
+  planPlayingTodos,
   planPlayModal,
   planSelectedTodo,
+  planTime,
 } from "states/plan";
 
 function usePlan() {
@@ -36,7 +40,40 @@ function usePlan() {
   const openComplete = useCallback(() => setIsOpenComplete(true), []);
   const closeComplete = useCallback(() => setIsOpenComplete(false), []);
 
+  // what is todo selected
   const [selectedTodo, setSelectedTodo] = useRecoilState(planSelectedTodo);
+  const resetSelectedTodo = useResetRecoilState(planSelectedTodo);
+
+  // the alternative cards
+  const [alterCards, setAlterCards] = useRecoilState(planCards);
+  const doneAlterCard = useCallback(
+    (direction: "left" | "right") => {
+      setAlterCards({ ...alterCards, [direction]: undefined });
+    },
+    [alterCards]
+  );
+  const resetAlterCards = useResetRecoilState(planCards);
+
+  // the playing todos
+  const [playingTodos, setPlayingTodos] = useRecoilState(planPlayingTodos);
+  const initPlayingTodos = (todos: Todo[]) => {
+    setPlayingTodos(todos);
+  };
+  const popPlayingTodos = () => {
+    const last = playingTodos[playingTodos.length - 1];
+    setPlayingTodos(
+      playingTodos.slice(0, Math.max(playingTodos.length - 1, 0))
+    );
+
+    return last;
+  };
+
+  // timer time
+  const [countDownTime, setCountDownTime] = useRecoilState(planTime);
+  const resetCountDownTime = useCallback(
+    () => setCountDownTime(Date.now()),
+    []
+  );
 
   return {
     plan,
@@ -45,6 +82,9 @@ function usePlan() {
     isOpenPauseModal,
     isOpenComplete,
     selectedTodo,
+    alterCards,
+    playingTodos,
+    countDownTime,
     setPlan,
     resetPlan,
     openPlayModal,
@@ -56,6 +96,13 @@ function usePlan() {
     openComplete,
     closeComplete,
     setSelectedTodo,
+    resetSelectedTodo,
+    setAlterCards,
+    doneAlterCard,
+    resetAlterCards,
+    initPlayingTodos,
+    popPlayingTodos,
+    resetCountDownTime,
   };
 }
 

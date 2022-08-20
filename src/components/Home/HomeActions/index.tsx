@@ -13,7 +13,7 @@ function HomeActions() {
     openPauseModal();
   }, []);
 
-  const onEdit = useCallback(() => push("PlanScreen", {}), []);
+  const onEdit = useCallback(() => push("AddDueScreen", { isEdit: true }), []);
 
   const onPlay = useCallback(() => {
     openPlayModal();
@@ -38,7 +38,7 @@ function HomeActions() {
       </div>
     );
 
-  if (plan)
+  if (plan.due)
     return (
       <div className="flex justify-center gap-8">
         <button

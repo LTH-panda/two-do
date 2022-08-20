@@ -8,8 +8,10 @@ function AddTodoInput() {
   const onSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      addTodo(todoInput);
-      resetTodoInput();
+      if (todoInput) {
+        addTodo(todoInput);
+        resetTodoInput();
+      }
     },
     [todoInput]
   );
