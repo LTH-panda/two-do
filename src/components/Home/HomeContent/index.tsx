@@ -33,7 +33,7 @@ function HomeContent() {
     );
 
   return (
-    <div className="flex items-center justify-center flex-1">
+    <div className="flex flex-col items-center justify-center flex-1 gap-4">
       <h1 className="text-3xl font-primary">시작하세요</h1>
     </div>
   );

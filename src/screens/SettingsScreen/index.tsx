@@ -8,6 +8,7 @@ function SettingsScreen() {
     <Layout>
       <Header title="settings" />
       <div className="layout">
+        <SettingsCell title="어떻게 사용하나요?" />
         <SettingsCell title="알림 설정" />
         <SettingsCell title="버전 정보" />
       </div>

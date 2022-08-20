@@ -20,11 +20,20 @@ function HomePlayModal() {
     closePlayModal();
   }, [plan]);
 
+  const onCancel = useCallback(() => {
+    closePlayModal();
+  }, []);
+
   return (
     <Modal isOpen={isOpenPlayModal} onClose={closePlayModal}>
-      <div className="flex flex-col items-center p-8 bg-white rounded-2xl w-[80vw] gap-4">
-        <h1 className="text-2xl font-primary">준비됐나요?</h1>
-        <Button title="시작할게요" onClick={onConfirm} theme="primary" />
+      <div className="flex flex-col p-8 bg-white rounded-2xl w-[80vw] gap-4 text-center">
+        <h1 className="text-3xl font-primary">준비됐나요?</h1>
+        <p className="text-xl">
+          두 개씩 할일을 보여드릴게요 <br />
+          하나씩 완료해보세요!
+        </p>
+        <Button title="시작할게!" onClick={onConfirm} theme="primary" />
+        <Button title="잠시만..." onClick={onCancel} />
       </div>
     </Modal>
   );

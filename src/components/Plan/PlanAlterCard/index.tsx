@@ -11,7 +11,7 @@ function PlanAlterCard({ id, content, direction }: PlanAlterCardProps) {
   const {
     selectedTodo,
     setSelectedTodo,
-    // resetSelectedTodo,
+    resetSelectedTodo,
     openComplete,
     closeComplete,
   } = usePlan();
@@ -23,7 +23,7 @@ function PlanAlterCard({ id, content, direction }: PlanAlterCardProps) {
 
   const onCard = () => {
     setSelectedTodo({ direction, id });
-    // else resetSelectedTodo();
+    if (selectedTodo.id === id) resetSelectedTodo();
   };
 
   return (
