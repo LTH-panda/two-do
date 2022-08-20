@@ -60,3 +60,8 @@ export const planTime = atom<number>({
   key: "planTime",
   default: Date.now(),
 });
+
+export const planCompleteModal = atom<boolean>({
+  key: "planCompleteModal",
+  default: false,
+});

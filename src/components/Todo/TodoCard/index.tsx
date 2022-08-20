@@ -18,7 +18,7 @@ function TodoCard({ id, title, isEdit = false }: TodoCardProps) {
       <h1 className="flex-1 break-all">{title}</h1>
       {isEdit && (
         <button type="button" onClick={onRemove} className="p-1">
-          <SvgIcon name="trash" size={25} />
+          <SvgIcon name="minus" size={25} />
         </button>
       )}
     </div>

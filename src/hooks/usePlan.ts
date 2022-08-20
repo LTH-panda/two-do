@@ -4,6 +4,7 @@ import { Todo } from "states/add";
 import {
   planCards,
   planCompleteAction,
+  planCompleteModal,
   planPauseModal,
   planPlan,
   planPlay,
@@ -75,6 +76,12 @@ function usePlan() {
     []
   );
 
+  // if all todos are done, open the complete modal
+  const [isOpenPlanComplete, setIsOpenPlanComplete] =
+    useRecoilState(planCompleteModal);
+  const openPlanComplete = useCallback(() => setIsOpenPlanComplete(true), []);
+  const closePlanComplete = useCallback(() => setIsOpenPlanComplete(false), []);
+
   return {
     plan,
     isOpenPlayModal,
@@ -85,6 +92,7 @@ function usePlan() {
     alterCards,
     playingTodos,
     countDownTime,
+    isOpenPlanComplete,
     setPlan,
     resetPlan,
     openPlayModal,
@@ -103,6 +111,8 @@ function usePlan() {
     initPlayingTodos,
     popPlayingTodos,
     resetCountDownTime,
+    openPlanComplete,
+    closePlanComplete,
   };
 }
 

@@ -3,6 +3,7 @@ import { BottomTab, Header } from "components/@modules";
 import Layout from "components/Layout";
 import {
   HomeActions,
+  HomeCompleteModal,
   HomeContent,
   HomePauseModal,
   HomePlayModal,
@@ -18,6 +19,7 @@ function HomeScreen() {
       </div>
       <HomePlayModal />
       <HomePauseModal />
+      <HomeCompleteModal />
       <BottomTab />
     </Layout>
   );
