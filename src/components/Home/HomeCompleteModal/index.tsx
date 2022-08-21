@@ -7,6 +7,7 @@ function HomeCompleteModal() {
   const {
     playingTodos,
     alterCards,
+    isPlayPlan,
     isOpenPlanComplete,
     openPlanComplete,
     closePlanComplete,
@@ -17,10 +18,11 @@ function HomeCompleteModal() {
     if (
       alterCards.left === undefined &&
       alterCards.right === undefined &&
-      playingTodos.length === 0
+      playingTodos.length === 0 &&
+      isPlayPlan
     )
       openPlanComplete();
-  }, [playingTodos, alterCards]);
+  }, [playingTodos, alterCards, isPlayPlan]);
 
   const onResult = useCallback(() => {
     push("ResultScreen", {});

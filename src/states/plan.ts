@@ -1,5 +1,8 @@
 import { atom } from "recoil";
+import { recoilPersist } from "recoil-persist";
 import { Todo } from "./add";
+
+const { persistAtom } = recoilPersist();
 
 export type Plan = {
   due: number;
@@ -9,6 +12,7 @@ export type Plan = {
 export const planPlan = atom<Plan>({
   key: "planPlan",
   default: { due: 0, todos: [] },
+  effects_UNSTABLE: [persistAtom],
 });
 
 export const planPlayModal = atom<boolean>({
@@ -34,6 +38,7 @@ export const planCompleteAction = atom<boolean>({
 export const planPlayingTodos = atom<Todo[]>({
   key: "planPlayingTodos",
   default: [],
+  effects_UNSTABLE: [persistAtom],
 });
 
 type SelectedTodo = {
@@ -54,11 +59,13 @@ type Cards = {
 export const planCards = atom<Cards>({
   key: "planCards",
   default: { left: undefined, right: undefined },
+  effects_UNSTABLE: [persistAtom],
 });
 
 export const planTime = atom<number>({
   key: "planTime",
   default: Date.now(),
+  effects_UNSTABLE: [persistAtom],
 });
 
 export const planCompleteModal = atom<boolean>({
