@@ -8,7 +8,7 @@ function PlanTodoRemains() {
   const remains = plan.todos.filter((T) => T.isDone).length;
 
   return (
-    <div className="flex font-primary">
+    <div className="flex text-xl font-primary">
       {remains}/{total} 완료!
     </div>
   );

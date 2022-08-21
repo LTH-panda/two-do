@@ -4,7 +4,11 @@ import React, { useEffect, useRef } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
 
 const renderer: CountdownRendererFn = ({ completed, formatted }) => (
-  <div className={`${completed && "text-rose-500"} font-primary `}>
+  <div
+    className={`${
+      completed ? "text-rose-500" : "text-sky-500"
+    } font-primary text-xl `}
+  >
     {completed && "+"} {formatted.hours} : {formatted.minutes} :{" "}
     {formatted.seconds}
   </div>

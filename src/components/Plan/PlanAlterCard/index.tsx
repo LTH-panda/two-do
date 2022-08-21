@@ -32,7 +32,7 @@ function PlanAlterCard({ id, content, direction }: PlanAlterCardProps) {
       onClick={onCard}
       className={`${
         selectedTodo.id === id && "scale-110 shadow-lg ring ring-sky-500"
-      } flex flex-1 justify-center items-center p-8 max-w-[50%] bg-white shadow-md rounded-2xl isActive font-primary text-2xl break-keep break-words`}
+      } flex flex-1 justify-center items-center p-8 max-w-[45%] w-full bg-white shadow-md rounded-2xl isActive font-primary text-2xl break-keep break-words`}
     >
       {content}
     </button>
