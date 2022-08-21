@@ -18,6 +18,3 @@
 .break-keep {
   word-break: keep-all;
 }
-.text-wrap {
-  overflow-wrap: break-word;
-}

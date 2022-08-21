@@ -10,12 +10,14 @@ function HomePlayModal() {
     initPlayingTodos,
     playPlan,
     resetCountDownTime,
+    resetAlterCards,
   } = usePlan();
 
   const onConfirm = useCallback(() => {
     const randomTodos = plan.todos.slice().sort(() => Math.random() - 0.5);
     initPlayingTodos(randomTodos);
     resetCountDownTime();
+    resetAlterCards();
     playPlan();
     closePlayModal();
   }, [plan]);

@@ -27,7 +27,7 @@ function AddTodoInput() {
         value={todoInput}
         onChange={changeTodoInput}
         autoComplete="off"
-        maxLength={25}
+        maxLength={28}
         className="flex-1 outline-none"
       />
       {todoInput && (
