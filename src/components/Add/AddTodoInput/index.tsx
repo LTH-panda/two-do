@@ -32,7 +32,7 @@ function AddTodoInput() {
       />
       {todoInput && (
         <button type="submit" className="p-1">
-          <SvgIcon name="plus" size={25} />
+          <SvgIcon name="plus" size={25} color="#0ea5e9" />
         </button>
       )}
     </form>
