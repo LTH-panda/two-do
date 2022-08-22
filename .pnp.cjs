@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@stackflow/basic-ui", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
             ["@stackflow/core", "npm:0.9.1"],\
+            ["@stackflow/plugin-history-sync", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.11.0"],\
             ["@stackflow/plugin-renderer-basic", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
             ["@stackflow/react", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
@@ -3916,6 +3917,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@stackflow/core", "npm:0.9.1"],\
             ["react-fast-compare", "npm:3.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@stackflow/plugin-history-sync", [\
+        ["npm:0.11.0", {\
+          "packageLocation": "./.yarn/cache/@stackflow-plugin-history-sync-npm-0.11.0-132e24c0bc-e1d73eb504.zip/node_modules/@stackflow/plugin-history-sync/",\
+          "packageDependencies": [\
+            ["@stackflow/plugin-history-sync", "npm:0.11.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.11.0", {\
+          "packageLocation": "./.yarn/__virtual__/@stackflow-plugin-history-sync-virtual-0b35a37db4/0/cache/@stackflow-plugin-history-sync-npm-0.11.0-132e24c0bc-e1d73eb504.zip/node_modules/@stackflow/plugin-history-sync/",\
+          "packageDependencies": [\
+            ["@stackflow/plugin-history-sync", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.11.0"],\
+            ["@stackflow/core", "npm:0.9.1"],\
+            ["@stackflow/react", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
+            ["@types/react", "npm:18.0.16"],\
+            ["@types/stackflow__core", null],\
+            ["@types/stackflow__react", null],\
+            ["react", "npm:18.2.0"],\
+            ["url-pattern", "npm:1.0.3"]\
+          ],\
+          "packagePeers": [\
+            "@stackflow/core",\
+            "@stackflow/react",\
+            "@types/react",\
+            "@types/stackflow__core",\
+            "@types/stackflow__react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16663,6 +16695,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["url-pattern", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/url-pattern-npm-1.0.3-de6c5ab8c2-7f4c577072.zip/node_modules/url-pattern/",\
+          "packageDependencies": [\
+            ["url-pattern", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["util-deprecate", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/util-deprecate-npm-1.0.2-e3fe1a219c-474acf1146.zip/node_modules/util-deprecate/",\
@@ -17032,6 +17073,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["whale-webview-starter", "workspace:."],\
             ["@stackflow/basic-ui", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
             ["@stackflow/core", "npm:0.9.1"],\
+            ["@stackflow/plugin-history-sync", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.11.0"],\
             ["@stackflow/plugin-renderer-basic", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
             ["@stackflow/react", "virtual:5442200f515fb40e8e90ccb5ef9dd4421b4c8c57a37493f1ce44ff7a2c956a0b5439e0446806b60497f8f6bb312fbef0a98e7f2a91aa835c99d6e57941c46310#npm:0.9.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\

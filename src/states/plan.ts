@@ -23,6 +23,7 @@ export const planPlayModal = atom<boolean>({
 export const planPlay = atom<boolean>({
   key: "planPlay",
   default: false,
+  effects_UNSTABLE: [persistAtom],
 });
 
 export const planPauseModal = atom<boolean>({

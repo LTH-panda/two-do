@@ -20,6 +20,7 @@ function BottomTab() {
         <SvgIcon
           name="homeSmile"
           color={name === "HomeScreen" ? "#000" : "#cbd5e1"}
+          size={30}
         />
       </button>
       <button
@@ -30,6 +31,7 @@ function BottomTab() {
         <SvgIcon
           name="settings"
           color={name === "SettingsScreen" ? "#000" : "#cbd5e1"}
+          size={30}
         />
       </button>
     </div>

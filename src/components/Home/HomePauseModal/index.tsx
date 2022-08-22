@@ -5,10 +5,10 @@ import { useFlow } from "stackflow";
 
 function HomePauseModal() {
   const { isOpenPauseModal, closePauseModal } = usePlan();
-  const { push } = useFlow();
+  const { replace } = useFlow();
 
   const onPause = useCallback(() => {
-    push("ResultScreen", { isPause: true });
+    replace("ResultScreen", { isPause: true });
     closePauseModal();
   }, []);
 

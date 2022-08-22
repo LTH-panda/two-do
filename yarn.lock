@@ -2256,6 +2256,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stackflow/plugin-history-sync@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@stackflow/plugin-history-sync@npm:0.11.0"
+  dependencies:
+    url-pattern: ^1.0.3
+  peerDependencies:
+    "@stackflow/core": 0
+    "@stackflow/react": 0
+    "@types/react": ">=16.8.0"
+    react: ">=16.8.0"
+  checksum: e1d73eb5040e31757de95cac0c964c97fbca773b8f1f5f2c49a71d68a9ab7da6e56856b9ebccbc37fc088a8c9518428cd69b38212886121c6e9383c393e851db
+  languageName: node
+  linkType: hard
+
 "@stackflow/plugin-renderer-basic@npm:^0.9.1":
   version: 0.9.1
   resolution: "@stackflow/plugin-renderer-basic@npm:0.9.1"
@@ -12186,6 +12200,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"url-pattern@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "url-pattern@npm:1.0.3"
+  checksum: 7f4c57707240f0eb18f4654c4206b8669de037594beb86abd090d4e3dacd4751fcb3a04e271a74cbbe2124bc573e857d8c0588c4accb17da03a62082a58559fc
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -12486,6 +12507,7 @@ __metadata:
   dependencies:
     "@stackflow/basic-ui": ^0.9.1
     "@stackflow/core": ^0.9.1
+    "@stackflow/plugin-history-sync": ^0.11.0
     "@stackflow/plugin-renderer-basic": ^0.9.1
     "@stackflow/react": ^0.9.1
     "@testing-library/jest-dom": ^5.14.1

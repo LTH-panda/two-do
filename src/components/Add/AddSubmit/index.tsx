@@ -1,5 +1,6 @@
 import { useActivity } from "@stackflow/react";
 import useAdd from "hooks/useAdd";
+import useKeypad from "hooks/useKeypad";
 import usePlan from "hooks/usePlan";
 import React, { useCallback, useEffect, useState } from "react";
 import { useFlow } from "stackflow";
@@ -11,6 +12,7 @@ function AddSubmit() {
   const { setPlan } = usePlan();
   const [progress, setProgress] = useState<"due" | "todo">("due");
   const [isAble, setIsAble] = useState<boolean>(false);
+  const { isOpenKeypad } = useKeypad();
 
   useEffect(() => {
     if (name === "AddDueScreen") setProgress("due");
@@ -43,7 +45,9 @@ function AddSubmit() {
       type="button"
       onClick={onSubmit}
       disabled={!isAble}
-      className={`${
+      className={`
+      ${isOpenKeypad && "hidden"}
+      ${
         !isAble && "!bg-gray-200 !text-gray-300"
       } flex justify-center p-8 text-2xl bg-sky-500 font-primary text-white iosSubmit`}
     >

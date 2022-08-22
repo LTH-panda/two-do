@@ -12,7 +12,7 @@ function HomeCompleteModal() {
     openPlanComplete,
     closePlanComplete,
   } = usePlan();
-  const { push } = useFlow();
+  const { replace } = useFlow();
 
   useEffect(() => {
     if (
@@ -25,7 +25,7 @@ function HomeCompleteModal() {
   }, [playingTodos, alterCards, isPlayPlan]);
 
   const onResult = useCallback(() => {
-    push("ResultScreen", {});
+    replace("ResultScreen", {});
     closePlanComplete();
   }, []);
 

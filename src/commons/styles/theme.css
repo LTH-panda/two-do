@@ -21,12 +21,12 @@
   word-break: keep-all;
 }
 .iosPTop {
-  padding-top: calc(constant(safe-area-inset-top));
-  padding-top: calc(env(safe-area-inset-top));
+  padding-top: calc(constant(safe-area-inset-top) + 1.5rem);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
 }
 .iosSubmit {
-  padding-bottom: calc(constant(safe-area-inset-bottom + 1rem));
-  padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+  padding-bottom: calc(constant(safe-area-inset-bottom + 2rem));
+  padding-bottom: calc(env(safe-area-inset-bottom) + 2rem);
 }
 .iosBottomTab {
   padding-bottom: calc(constant(safe-area-inset-bottom / 2));

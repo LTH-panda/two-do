@@ -4,11 +4,11 @@ import React, { useCallback } from "react";
 import { useFlow } from "stackflow";
 
 function ResultActions() {
-  const { pop } = useFlow();
+  const { replace } = useFlow();
   const { resetPlan, pausePlan } = usePlan();
 
   const onEnd = useCallback(() => {
-    pop();
+    replace("HomeScreen", {});
     pausePlan();
     resetPlan();
   }, []);
