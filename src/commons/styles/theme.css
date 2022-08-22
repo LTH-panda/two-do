@@ -1,6 +1,8 @@
 /* theme */
 .layout {
-  @apply flex flex-col pt-[6rem] flex-1 overflow-y-auto;
+  @apply flex flex-col flex-1 pt-[6rem] overflow-y-auto;
+  padding-top: calc(constant(safe-area-inset-top) + 6rem);
+  padding-top: calc(env(safe-area-inset-bottom) + 6rem);
 }
 .isHover {
   @apply duration-150 hover:-translate-y-2;
@@ -17,4 +19,8 @@
 }
 .break-keep {
   word-break: keep-all;
+}
+.iosPTop {
+  padding-top: calc(constant(safe-area-inset-top) + 1rem);
+  padding-top: calc(env(safe-area-inset-bottom) + 1rem);
 }
