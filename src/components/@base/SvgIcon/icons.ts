@@ -1,5 +1,6 @@
 export { ReactComponent as check } from "assets/icons/check-square.svg";
 export { ReactComponent as chevronLeft } from "assets/icons/chevron-left.svg";
+export { ReactComponent as chevronRight } from "assets/icons/chevron-right.svg";
 export { ReactComponent as close } from "assets/icons/close.svg";
 export { ReactComponent as homeSmile } from "assets/icons/home-smile.svg";
 export { ReactComponent as minus } from "assets/icons/minus-square.svg";

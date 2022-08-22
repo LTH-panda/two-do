@@ -7,12 +7,14 @@ import {
   HomeScreen,
   ResultScreen,
   SettingsScreen,
+  MenualScreen,
 } from "screens";
 
 export const activities = {
   AddDueScreen,
   AddTodoScreen,
   HomeScreen,
+  MenualScreen,
   ResultScreen,
   SettingsScreen,
 };
