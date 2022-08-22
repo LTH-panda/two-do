@@ -6,7 +6,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useFlow } from "stackflow";
 
 function AddSubmit() {
-  const { push, pop } = useFlow();
+  const { push, replace } = useFlow();
   const { name } = useActivity();
   const { due, todos } = useAdd();
   const { setPlan } = usePlan();
@@ -35,8 +35,7 @@ function AddSubmit() {
     }
     if (progress === "todo") {
       setPlan({ due, todos });
-      pop();
-      pop({ animate: false });
+      replace("HomeScreen", {});
     }
   }, [progress, due, todos]);
 

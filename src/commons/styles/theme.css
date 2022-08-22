@@ -16,7 +16,7 @@
   @apply flex px-8 py-4 hover:bg-gray-200;
 }
 .break-keep {
-  word-break: keep-all;
+  word-break: break-word;
 }
 .iosPTop {
   padding-top: calc(constant(safe-area-inset-top) + 1rem);

@@ -1,5 +1,5 @@
 import { useActivity } from "@stackflow/react";
-import { Title } from "components/@modules";
+import { Header, Title } from "components/@modules";
 import Layout from "components/Layout";
 import {
   ResultActions,
@@ -13,6 +13,7 @@ function ResultScreen() {
 
   return (
     <Layout screenTheme="android">
+      <Header />
       <div className="gap-4 p-8 layout">
         <Title title={params.isPause ? "실패.." : "성공!"} />
         <ResultProperties />
