@@ -19,7 +19,7 @@ function AddDueScreen() {
   return (
     <Layout screenTheme="android">
       <Header left={<Back theme="close" />} />
-      <div className="p-8 layout">
+      <div className="px-8 layout">
         <Title title="언제까지 끝내실건가요?" />
         <AddDueSelect />
       </div>
