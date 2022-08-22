@@ -1,7 +1,7 @@
-import { minutesToMilliseconds } from "date-fns";
 import usePlan from "hooks/usePlan";
 import React, { useEffect, useRef } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
+import getDueToTime from "utils/getDueToTime";
 
 const renderer: CountdownRendererFn = ({ completed, formatted }) => (
   <div
@@ -25,7 +25,7 @@ function PlanTimer() {
   return (
     <div>
       <Countdown
-        date={countDownTime + minutesToMilliseconds(plan.due)}
+        date={countDownTime + getDueToTime(plan.due)}
         renderer={renderer}
         overtime
         ref={timerRef}
