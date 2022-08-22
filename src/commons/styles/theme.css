@@ -1,8 +1,6 @@
 /* theme */
 .layout {
-  @apply flex flex-col flex-1 pt-[6rem] overflow-y-auto;
-  padding-top: calc(constant(safe-area-inset-top) + 6rem);
-  padding-top: calc(env(safe-area-inset-bottom) + 6rem);
+  @apply flex flex-col flex-1 overflow-y-auto;
 }
 .isHover {
   @apply duration-150 hover:-translate-y-2;
@@ -21,8 +19,8 @@
   word-break: keep-all;
 }
 .iosPTop {
-  padding-top: calc(constant(safe-area-inset-top) + 1.5rem);
-  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+  padding-top: calc(constant(safe-area-inset-top) + 1rem);
+  padding-top: calc(env(safe-area-inset-top) + 1rem);
 }
 .iosSubmit {
   padding-bottom: calc(constant(safe-area-inset-bottom + 2rem));

@@ -1,6 +1,6 @@
-import { TodoCard } from "components/Todo";
 import useAdd from "hooks/useAdd";
 import React from "react";
+import AddTodoCard from "../AddTodoCard";
 import AddTodoInput from "../AddTodoInput";
 
 function AddTodoList() {
@@ -12,7 +12,7 @@ function AddTodoList() {
         {todos.length < 5 && <AddTodoInput />}
         <div className="flex flex-col flex-1 gap-2">
           {todos.map((T) => (
-            <TodoCard id={T.id} title={T.title} isEdit key={T.id} />
+            <AddTodoCard id={T.id} title={T.title} key={T.id} />
           ))}
         </div>
       </div>
