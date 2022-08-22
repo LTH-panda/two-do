@@ -65,7 +65,7 @@ function HomeActions() {
         onClick={onStart}
         className="flex p-6 isActive rounded-2xl bg-sky-500"
       >
-        <SvgIcon name="scales" size={40} />
+        <SvgIcon name="plus" size={40} />
       </button>
     </div>
   );

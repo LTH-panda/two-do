@@ -7,6 +7,7 @@ import {
 import { TodoList } from "components/Todo";
 import usePlan from "hooks/usePlan";
 import React from "react";
+import getStartMessage from "utils/getStartMessage";
 
 function HomeContent() {
   const { plan, isPlayPlan } = usePlan();
@@ -34,7 +35,10 @@ function HomeContent() {
 
   return (
     <div className="flex flex-col items-center justify-center flex-1 gap-4">
-      <h1 className="text-3xl font-primary">시작하세요</h1>
+      <div className="flex flex-col items-center justify-center flex-1 gap-2 text-4xl font-primary">
+        <h1>시작해보세요</h1>
+        <div className="text-xl text-gray-400">'{getStartMessage()}'</div>
+      </div>
     </div>
   );
 }
