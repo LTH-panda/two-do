@@ -11,7 +11,7 @@ function BottomTab() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center bg-white border-t-2 border-solid">
+    <div className="flex items-center justify-center bg-white border-t-2 border-solid iosBottomTab">
       <button
         type="button"
         onClick={() => onNavigate("HomeScreen")}

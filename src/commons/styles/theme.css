@@ -21,6 +21,14 @@
   word-break: keep-all;
 }
 .iosPTop {
-  padding-top: calc(constant(safe-area-inset-top) + 1rem);
-  padding-top: calc(env(safe-area-inset-bottom) + 1rem);
+  padding-top: calc(constant(safe-area-inset-top));
+  padding-top: calc(env(safe-area-inset-top));
+}
+.iosSubmit {
+  padding-bottom: calc(constant(safe-area-inset-bottom + 1rem));
+  padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+}
+.iosBottomTab {
+  padding-bottom: calc(constant(safe-area-inset-bottom / 2));
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2);
 }

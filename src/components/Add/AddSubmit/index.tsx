@@ -45,7 +45,7 @@ function AddSubmit() {
       disabled={!isAble}
       className={`${
         !isAble && "!bg-gray-200 !text-gray-300"
-      } flex justify-center p-8 text-2xl bg-sky-500 font-primary text-white`}
+      } flex justify-center p-8 text-2xl bg-sky-500 font-primary text-white iosSubmit`}
     >
       {name === "AddDueScreen" ? "할일 작성하기" : "작성 완료!"}
     </button>
